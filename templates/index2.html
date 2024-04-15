@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Model Deployment</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="menu-bar">
+            <ul>
+            </ul>
+        </div>
+        
+        <div class="logo-container">
+            <!-- Coloca la imagen dentro y fuera de la barra de menú -->
+            <img class="logo" src="https://www.uptc.edu.co/sitio/export/sites/default/portal/.content/imagenes/header-v2/uptc_log_2021.png_1492831668.png" alt="Logo">
+        </div>      
+    <form action="/predict" method="POST">
+    <h2 class="titulo">
+        <p>Modelo predictivo de la deserción académica en la UPTC </p>
+        <p>Aplicación de Support Vector Machines y Metodología CRISP-DM.</p>
+    </h2>
+
+<div class="contenedores">
+    <div class="centrado">
+        <h2 class="titulo2">Predicción de Estado</h2>
+
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="EDAD" required><br><br>
+            
+            <label for="SEXO">Sexo:</label>
+            <select id="SEXO" name="SEXO" required>
+                {% for sexo in categorias_sexo %}
+                    <option value="{{ sexo }}">{{ sexo }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="estrato">Estrato:</label>
+            <input type="text" id="estrato" name="ESTRATO" required><br><br>
+
+            <label for="jornada">Jornada:</label>
+            <select id="jornada" name="JORNADA" required>
+                {% for jornada in categorias_jornada %}
+                    <option value="{{ jornada }}">{{ jornada }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="modalidad">Modalidad:</label>
+            <select id="modalidad" name="MODALIDAD" required>
+                {% for modalidad in categorias_modalidad %}
+                    <option value="{{ modalidad }}">{{ modalidad }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="nombre_sede">Nombre de la Sede:</label>
+            <select id="nombre_sede" name="NOMBRE_SEDE" required>
+                {% for sede in categorias_sede %}
+                    <option value="{{ sede }}">{{ sede }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="tipo_iden_est">Tipo de Identificación del Estudiante:</label>
+            <select id="tipo_iden_est" name="TIPO_IDEN_EST" required>
+                {% for tipo_iden in categorias_tipo_iden %}
+                    <option value="{{ tipo_iden }}">{{ tipo_iden }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="nomre_facultad">Nombre del facultad:</label>
+            <select id="nomre_facultad" name="NOMBRE_FACULTAD" required>
+                {% for nombre_facultad in categorias_nombre_facultad %}
+                    <option value="{{ nombre_facultad }}">{{ nombre_facultad }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="lugar_nacimiento">Lugar de Nacimiento:</label>
+            <select id="lugar_nacimiento" name="LUGAR_NACIMIENTO" required>
+                {% for lugar in categorias_lugar_nacimiento %}
+                    <option value="{{ lugar }}">{{ lugar }}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="Predecir">
+     </div>
+</div>
+
+
+    </form>
+    <br>
+
+    <footer>
+        <div class="containers">
+            <div class="columnas">
+                <!-- Contenido del footer -->
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 UPTC - Departamento de Innovación Académica</p>
+                <p>Institución de Educación Superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional</p>
+                <p class="ex">Exactitud: {{ accuracy }}</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

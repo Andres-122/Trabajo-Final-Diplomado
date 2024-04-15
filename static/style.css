@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Esto asegura que el cuerpo ocupe toda la altura del viewport */
+    background-color: #ffffff; /* Color de fondo gris */
+  
+}
+
+/* Estilos para el botón de envío al pasar el cursor */
+input[type="submit"]:hover {
+    background-color: #000000; /* Cambio de color de fondo al pasar el cursor */
+}   
+
+input[type="submit"] {
+    background-color: #ffc905; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.menu-bar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: -10px;
+    overflow: hidden;
+}
+
+.menu-bar li {
+    float: right;
+    margin-right: 300px; /* Ajusta el margen derecho para mover los elementos un poco a la izquierda */
+}
+
+.menu-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li a:hover {
+    background-color: #111;
+}
+
+.logo-container {
+    position: relative;
+    overflow: visible; /* Permite que la imagen sobresalga */
+}
+
+.logo {
+    position: absolute;
+    top: -20px; /* Ajusta la posición vertical para que parte de la imagen esté dentro de la barra de menú */
+    left: 0;
+    width: 300px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.contenedores {
+    margin-top: 200px; /* Ajusta el espacio entre el borde superior de la página y el contenedor */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    margin-top: 220px; /* Ajusta el espacio entre el borde superior del contenedor y su contenido */
+
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles for screens up to 600px wide */
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for screens between 601px and 1024px wide */
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* Styles for screens wider than 1025px */
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 65px;
+    margin: 0 auto;
+
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .columnas {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .columna {
+    flex: 1 1 auto;
+    padding: 0 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ddd;
+  }
+  
+  .redes-sociales {
+    margin-top: 10px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.footer {
+  margin-top: auto;
+}
+
+.centrado {
+  margin-top: -250px; /* Ajusta el margen superior */
+  margin-bottom: 80px; /* Ajusta el margen inferior */
+}
+
+.titulo {
+  padding: 50px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.copyright{
+  margin-top: auto;
+  text-align: center;
+}
+
+.titulo2 {
+  padding: 0px;
+  font-size: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.ex{
+  font-size: 10px;
+}

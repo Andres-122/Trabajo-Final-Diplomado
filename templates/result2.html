@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Model Deployment</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="menu-bar">
+            <ul>
+            </ul>
+        </div>
+        
+        <div class="logo-container">
+            <!-- Coloca la imagen dentro y fuera de la barra de menú -->
+            <img class="logo" src="https://www.uptc.edu.co/sitio/export/sites/default/portal/.content/imagenes/header-v2/uptc_log_2021.png_1492831668.png" alt="Logo">
+        </div>      
+        <form action="/" method="post">
+            <div class="contenedores">
+                <h1>Resultado de Predicción</h1>
+                <div class="centrado">
+                    {% if prediction == "RETIRADO CON CUPO RESERVADO" %}
+                        <p>El estado predicho es: RETIRADO CON CUPO RESERVADO</p>
+                        <p>Basándonos en el análisis detallado de los datos disponibles, el sistema ha llegado a una </p>
+                        <p>predicción con alta certeza: el estado futuro del elemento en cuestión es "Retirado con Cupo </p>
+                        <p>Reservado". Esta predicción se fundamenta en múltiples variables y modelos predictivos, </p>
+                        <p>garantizando así su fiabilidad. </p>
+                        <p>"Retirado con Cupo Reservado" indica que, aunque el elemento en consideración se retire de </p>
+                        <p>su función actual, se ha establecido un cupo reservado para su posible retorno o reemplazo en </p>
+                        <p>un momento posterior. Este estado proporciona una solución estratégica que permite </p>
+                        <p>mantener la continuidad operativa o la disponibilidad de recursos esenciales, al tiempo que se </p>
+                        <p>abre la posibilidad de reintegración en un futuro planificado. </p>
+                        <p>Esta predicción ofrece una visión clara y anticipada del curso probable de acción, lo que facilita </p>
+                        <p>la toma de decisiones informadas y la implementación de medidas preventivas o correctivas, </p>
+                        <p>según corresponda. Estaremos atentos al desarrollo de la situación para ajustar nuestra </p>
+                        <p>estrategia de manera adecuada y asegurar un resultado favorable.</p>
+                    {% elif prediction == "NO MATRICULADO" %}
+                        <p>El estado predicho es: NO MATRICULADO</p>
+                        <p>La deserción académica es un fenómeno complejo que puede estar influenciado por una variedad de factores, </p>
+                        <p>incluidos los sociales, económicos y personales. En el contexto de SPADIES, el Sistema para la Prevención de la </p>
+                        <p>Deserción de la Educación Superior, se han implementado diversas estrategias para identificar y abordar las causas </p>
+                        <p>subyacentes de la deserción, así como para brindar apoyo y recursos a los estudiantes en riesgo. </p>
+                        <p>El Ministerio de Educación desempeña un papel fundamental en la formulación de políticas y programas destinados </p>
+                        <p>a prevenir la deserción académica y garantizar que todos los estudiantes tengan acceso a una educación de calidad. </p>
+                        <p>Desde iniciativas de inclusión educativa hasta programas de becas y apoyo psicosocial, se están llevando a cabo</p> 
+                        <p>esfuerzos significativos para abordar este desafío. </p>
+                        <p>Sin embargo, la lucha contra la deserción escolar requiere un enfoque integral y colaborativo que involucre a</p> 
+                        <p>diversas partes interesadas, incluidos padres, maestros, comunidades y organizaciones gubernamentales y no</p> 
+                        <p>gubernamentales. Es crucial trabajar juntos para crear un entorno educativo que sea inclusivo, accesible y que</p> 
+                        <p>brinde oportunidades equitativas para todos los estudiantes. </p>
+                        <p>El estado "NO MATRICULADO" nos insta a redoblar nuestros esfuerzos y comprometernos con la causa de la</p> 
+                        <p>educación, garantizando que ningún estudiante se quede atrás y que todos tengan la oportunidad de alcanzar su máximo potencial. </p>
+                    {% else %}
+                        <p>El estado predicho es: {{ prediction }}</p>
+                    {% endif %}
+                    <br>
+                </div>
+            </div>
+        </form>
+        <br>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+        <footer>
+            <div class="container">
+                <div class="columnas">
+                    <!-- Contenido del footer -->
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 UPTC - Departamento de Innovación Académica</p>
+                    <p>Institución de Educación Superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
