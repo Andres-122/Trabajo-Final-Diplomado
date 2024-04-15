@@ -173,3 +173,9 @@ input[type="submit"] {
 .ex{
   font-size: 10px;
 }
+
+/* Estilo para centrar el botón */
+.contenedor-botones {
+  text-align: center; /* Centra el contenido del contenedor */
+}
+
